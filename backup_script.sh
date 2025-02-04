@@ -9,8 +9,7 @@ echo "source_dir_name: $source_dir_name"
 new_name_dir="${source_dir_name}_backup_$(date +%Y%m%d_%H%M)"
 echo "new folder name: $new_name_dir"
 
-backup_dir="${source_dir}${new_name_dir}"
-
+backup_dir="${source_dir}/${new_name_dir}"
 # Calculate the total size of the source directory before copying
 total_size=$(du -s "$source_dir" | awk '{print $1}')
 
